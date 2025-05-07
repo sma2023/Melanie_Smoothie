@@ -1,7 +1,6 @@
 # Import python packages
 import streamlit as st
-conn = st.connection("snowflake")
-df = conn.query("SELECT * FROM my_table")
+
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
