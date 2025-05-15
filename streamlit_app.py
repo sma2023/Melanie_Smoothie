@@ -44,10 +44,7 @@ if ingredient_list:
      search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
     #st.write('The search value for ', fruit_chosen,' is ', search_on, '.') 
   
-import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
-    
+   
   my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
              values ('""" + ingredient_string + """', '""" + name_on_order + """')"""
  #st.write(my_insert_stmt)
